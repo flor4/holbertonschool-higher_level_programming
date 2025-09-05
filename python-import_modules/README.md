@@ -10,33 +10,27 @@
 5. 📦 [Everything can be imported](./5-everything_can_be_imported.py)  
 
 ---
-
 ## 🚀 Quick Overview
 
-* **✨ Why Python is awesome**
+* **✨ Why Python is awesome**  
   Python is simple, readable, powerful, and has a huge community full of libraries.
 
-* **📥 How to import functions from another file**
+* **📥 How to import functions from another file**  
   Use `from file import function` to easily reuse code.
 
-* **🔧 How to use imported functions**
+* **🔧 How to use imported functions**  
   Call them like any other function in your script.
 
-* **📦 How to create a module**
+* **📦 How to create a module**  
   A Python module is just a `.py` file containing functions or classes you want to reuse.
 
-* **🔍 How to use the built-in `dir()` function**
+* **🔍 How to use the built-in `dir()` function**  
   `dir(object)` lists all attributes and methods available on an object or module.
 
-* **⛔ How to prevent code from running on import**
+* **⛔ How to prevent code from running on import**  
   Place executable code inside:
 
   ```python
   if __name__ == "__main__":
       # code here runs only when script is executed directly
-  ```
-
-* **💻 How to use command line arguments**
-  Use the `sys` module (`sys.argv`) to access arguments passed to your script from the terminal.
-
 ---
