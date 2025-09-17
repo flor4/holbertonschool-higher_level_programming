@@ -103,12 +103,6 @@ By completing this project, you will understand:
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to fork the repo and submit pull requests.
-
----
-
 ## 📝 License
 
 This project is **educational** and may be subject to HOLBERTON school with love ❤️.
@@ -119,6 +113,6 @@ This project is **educational** and may be subject to HOLBERTON school with love
 
 Project part of the **Higher Level Programming** curriculum.
 
-A 😺 production! 
+A 😺 readme production! 
 
 ---
