@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Module defining Shape abstract class, and concrete classes Circle and Rectangle.
+Module defining Shape abstract class,
+and concrete classes Circle and Rectangle.
 Also defines a function shape_info using duck typing.
 """
 
