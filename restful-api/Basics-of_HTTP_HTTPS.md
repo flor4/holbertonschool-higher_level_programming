@@ -43,11 +43,8 @@ HTTPS is the secure version of HTTP. It uses SSL/TLS to encrypt data between the
 - **🔓 HTTP**: Not secure – data can be intercepted
 - **🔒 HTTPS**: Secure – uses encryption (SSL/TLS)
 ---
-Bien sûr ! Voici ta note avec un emoji 💡 pour indiquer "à savoir" ou "astuce" :
 
----
-
-### 💡 About SSL and TLS
+💡 **About SSL and TLS:**
 
 SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are security protocols that encrypt data transmitted between a web browser and a server to ensure privacy and integrity. SSL is the older protocol and is now considered outdated, while TLS is its modern, more secure replacement. Although people often say "SSL certificate," most websites today actually use TLS to protect their connections. Together, they form the foundation of HTTPS security.
 
@@ -142,5 +139,5 @@ In this exercise, we explored the fundamental differences between **HTTP** and *
 
 - [HTTP Methods - REST API Tutorial](https://restfulapi.net/http-methods/)  
   Practical overview of common HTTP methods and when to use them.
-  
+
 ---
