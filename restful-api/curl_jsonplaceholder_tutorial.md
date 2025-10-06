@@ -278,8 +278,6 @@ curl -X POST -d "title=foo&body=bar&userId=1" https://jsonplaceholder.typicode.c
 > * Use `-X` to specify HTTP method.
 > * Use `-d` to send data with POST requests.
 
-```
----
 
 ## 📑 Exercise Summary
 
