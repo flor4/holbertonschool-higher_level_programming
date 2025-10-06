@@ -51,7 +51,7 @@ This exercise gives you hands-on experience with HTTP requests and shows how API
 - Once installed, confirm its availability by running:  
   ```bash
   curl --version
-````
+
 
 * Use curl to fetch the content of a webpage. For example:
 
@@ -59,7 +59,6 @@ This exercise gives you hands-on experience with HTTP requests and shows how API
   curl http://example.com
   ```
 
----
 
 ## 2. Fetching Data from an API 📡
 
