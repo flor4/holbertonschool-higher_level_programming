@@ -79,11 +79,13 @@ An HTTP response is the message sent back by the server after receiving a client
 
 ### 📬 HTTP Response Example:
 
+```
 HTTP/1.1 200 OK
 Content-Type: text/html
 Content-Length: 1024
 
-<html> <body>Hello World</body> </html> ```
+<html> <body>Hello World</body> </html> 
+```
 
 Components:
 
