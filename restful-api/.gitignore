@@ -7,4 +7,4 @@ __pycache__/
 
 # Ignorer les fichiers tests type main
 
-main.py
+*-main.py
