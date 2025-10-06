@@ -188,6 +188,7 @@ curl https://jsonplaceholder.typicode.com/posts
 **Output:**
 <details>
   <summary>Click to expand output</summary>
+  ```
   {
     "userId": 1,
     "id": 1,
@@ -788,6 +789,7 @@ curl https://jsonplaceholder.typicode.com/posts
     "title": "at nam consequatur ea labore ea harum",
     "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
   }
+  ```
 </details>
 
 ---
