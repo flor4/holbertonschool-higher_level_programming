@@ -1,4 +1,4 @@
-````markdown
+
 # 📘 Exercise Overview: Using `curl` to Interact with APIs
 
 This exercise is designed to introduce you to the basic usage of `curl`, a powerful command-line tool used for transferring data over various protocols such as HTTP and HTTPS.
