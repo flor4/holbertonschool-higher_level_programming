@@ -9,7 +9,7 @@ class MyHandler(BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
-            self.wfile.write(b"Hello, this is a simple API")
+            self.wfile.write("Hello, this is a simple API".encode('utf-8'))
 
         elif self.path == "/data":
             self.send_response(200)
@@ -27,7 +27,7 @@ class MyHandler(BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
-            self.wfile.write(b"OK")
+            self.wfile.write("OK".encode('utf-8'))
 
         elif self.path == "/info":
             self.send_response(200)
@@ -44,15 +44,15 @@ class MyHandler(BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
-            self.wfile.write(b"Endpoint not found")
+            self.wfile.write("Endpoint not found".encode('utf-8'))
 
 
-def run():
+def main():
     server_address = ('', 8000)
-    httpq = HTTPServer(server_address, MyHandler)
+    httpd = HTTPServer(server_address, MyHandler)
     print("Server running on http://localhost:8000...")
-    httpq.serve_forever()
+    httpd.serve_forever()
 
 
 if __name__ == "__main__":
-    run()
+    main()
