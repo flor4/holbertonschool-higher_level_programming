@@ -1,5 +1,5 @@
 
-````markdown
+
 # Introduction à SQL
 
 **SQL (Structured Query Language)** est un langage standard utilisé pour interagir avec les bases de données relationnelles. Il permet de créer des bases, des tables, d'insérer, de modifier, de supprimer et de lire des données.
@@ -31,7 +31,7 @@ UPDATE utilisateurs SET email = 'alice@nouveau.com' WHERE nom = 'Alice';
 
 -- Supprimer une donnée
 DELETE FROM utilisateurs WHERE nom = 'Alice';
-````
+```
 
 Ces commandes permettent de manipuler facilement les données dans une base MySQL. Pour en apprendre plus, explorez les tutoriels SQL ou la documentation officielle.
 
@@ -51,7 +51,7 @@ sudo apt update
 
 # Installer le serveur MySQL
 sudo apt install mysql-server
-````
+```
 
 > Pendant l'installation, MySQL sera installé sans demander de mot de passe root (authentification par socket sur Ubuntu par défaut).
 
