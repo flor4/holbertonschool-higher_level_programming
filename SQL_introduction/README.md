@@ -103,4 +103,17 @@ Bye
 * Par défaut sur Ubuntu, MySQL utilise **l’authentification Unix Socket** pour l’utilisateur `root`. Cela signifie que vous devez utiliser `sudo mysql` pour vous connecter en tant que root.
 * Pour définir un mot de passe root classique ou changer le mode d’authentification, vous pouvez le faire dans MySQL après l’installation.
 
----
+### petit rappel
+
+| Mot-clé | Signification            | Comportement                                        |
+| ------- | ------------------------ | --------------------------------------------------- |
+| `ASC`   | Ascending (croissant)    | Du **plus petit au plus grand** (valeur par défaut) |
+| `DESC`  | Descending (décroissant) | Du **plus grand au plus petit**                     |
+
+```
+-- Trier les scores du plus petit au plus grand
+SELECT score, name FROM second_table ORDER BY score ASC;
+
+-- Trier les scores du plus grand au plus petit
+SELECT score, name FROM second_table ORDER BY score DESC;
+```
