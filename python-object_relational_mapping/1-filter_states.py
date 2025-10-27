@@ -41,6 +41,6 @@ if __name__ == "__main__":
     for row in rows:
         print(row)
 
-    # 6. Close the cursor (to free memory) and then the database connection
+
     cur.close()
     conn.close()
