@@ -1,59 +1,76 @@
 from flask import Flask, render_template, request
-import json, csv, sqlite3, os
+import sqlite3
+import json
+import csv
 
 app = Flask(__name__)
 
-def read_json():
-    try:
-        with open('data/products.json', 'r', encoding='utf-8') as f:
-            return json.load(f)
-    except Exception as e:
-        return {'error': f'Erreur JSON : {e}'}
-
-def read_csv():
-    products = []
-    try:
-        with open('data/products.csv', newline='', encoding='utf-8') as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                products.append(row)
-    except Exception as e:
-        return {'error': f'Erreur CSV : {e}'}
-    return products
-
-def read_sqlite():
-    try:
-        db_path = os.path.join('data', 'products.db')
-        conn = sqlite3.connect(db_path)
-        cursor = conn.cursor()
-        cursor.execute("SELECT id, name, category, price FROM Products")
-        rows = cursor.fetchall()
-        conn.close()
-
-        return [
-            {"id": row[0], "name": row[1], "category": row[2], "price": row[3]}
-            for row in rows
-        ]
-    except Exception as e:
-        return {'error': f'Erreur SQL : {e}'}
 
 @app.route('/')
-def display_products():
-    source = request.args.get('source', 'json').lower()
+def home():
+    return render_template('index.html')
 
-    if source == 'json':
-        data = read_json()
-    elif source == 'csv':
-        data = read_csv()
-    elif source == 'sql':
-        data = read_sqlite()
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+
+@app.route('/items')
+def items():
+    filename = "./data/items.json"
+    try:
+        with open(filename, 'r', encoding="utf-8") as f:
+            items = json.loads(f.read())["items"]
+    except (FileNotFoundError, KeyError):
+        items = []
+    return render_template('items.html', items=items)
+
+
+@app.route('/products')
+def products():
+    source = request.args.get('source')
+    id = request.args.get('id')
+    items = []
+    message = None
+
+    if source in ['json', 'csv']:
+        filename = f"./data/products.{source}"
+        with open(filename, 'r', encoding="utf-8") as f:
+            if source == 'json':
+                items = json.loads(f.read())
+            else:
+                dictionaries = csv.DictReader(f)
+                for item in dictionaries:
+                    items.append(item)
+    elif source == "sql":
+        filename = "./data/products.db"
+        connection = sqlite3.connect(filename)
+        connection.row_factory = sqlite3.Row
+        cursor = connection.cursor()
+        cursor.execute("""
+            SELECT id, name, category, price
+            FROM Products
+        """)
+        result = cursor.fetchall()
+        connection.close()
+        items = [dict(row) for row in result]
     else:
-        return render_template('product_display.html', error="Wrong source")
+        message = "Wrong source"
 
-    if isinstance(data, dict) and 'error' in data:
-        return render_template('product_display.html', error=data['error'])
+    if id and not message:
+        id = int(id)
+        valid = [item["id"] for item in items]
+        if id not in valid:
+            message = "Product not found"
 
-    return render_template('product_display.html', products=data)
+    return render_template('product_display.html', items=items, id=id, message=message)
+
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
