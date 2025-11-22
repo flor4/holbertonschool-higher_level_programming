@@ -28,8 +28,8 @@ print(type(a))  # <class 'int'>
 > Tip: If two variables share the same `id()`, they point to the **same object** in memory.
 
 ---
-![Python Memory Diagram](https://tse3.mm.bing.net/th/id/OIP.fXCQjdEJwV9cxAcyZA0BjgHaEK?pid=Api)
-*Figure: Visual representation of mutable vs immutable objects in Python.*
+![Mutable vs Immutable in Python](https://tse2.mm.bing.net/th/id/OIP.L9eWZKELyAvlXfcC9LfZMQHaE3?pid=Api)
+
 ## Mutable Objects
 
 **Mutable objects** can be **modified after creation**. Common examples:
