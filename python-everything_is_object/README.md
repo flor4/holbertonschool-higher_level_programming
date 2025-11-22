@@ -7,6 +7,21 @@
 Python is a flexible and powerful programming language, but understanding how it handles **objects in memory** is essential for writing clean, efficient, and bug-free code. In this guide, we will explore key concepts like `id()` and `type()`, the difference between **mutable** and **immutable** objects, how Python manages memory for these objects, and how this affects functions and variables. We’ll also cover advanced topics like **integer pre-allocation** and **aliases**.
 
 ---
+# Table of Contents
+
+In this guide, we’ll explore Python’s objects, memory management, and the difference between mutable and immutable types. Here’s a quick overview of the topics covered:
+
+1. [Introduction](#introduction)
+2. [`id()` and `type()`](#id-and-type)
+3. [Mutable Objects](#mutable-objects)
+4. [Immutable Objects](#immutable-objects)
+5. [Why Does It Matter?](#why-does-it-matter)
+6. [Function Arguments: Pass-by-Assignment](#function-arguments-pass-by-assignment)
+7. [Assignment vs Referencing](#assignment-vs-referencing)
+8. [Integer Pre-allocation (`NSMALLPOSINTS` and `NSMALLNEGINTS`)](#integer-pre-allocation-nsmallposints-and-nsmallnegints)
+9. [Aliases](#aliases)
+10. [Special Cases: Tuple and Frozen Set](#special-cases-tuple-and-frozen-set)
+11. [Conclusion](#conclusion)
 
 ## What Are `id()` and `type()`?
 
